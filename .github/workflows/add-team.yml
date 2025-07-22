@@ -7,7 +7,10 @@ on:
       - 'Release/*'
   workflow_dispatch:
     
-
+permissions:
+  pull-requests: write
+  contents: read
+  
 jobs:
   add_release_team:
     if: startsWith(github.event.pull_request.base.ref, 'Release/')
@@ -22,6 +25,6 @@ jobs:
               owner: context.repo.owner,
               repo:  context.repo.repo,
               pull_number: pr.number,
-              review_requester: 'celim87@gmail.com',
+              reviewers: ['clim0126'],  
             });
             
