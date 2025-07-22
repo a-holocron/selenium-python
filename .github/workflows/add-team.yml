@@ -22,6 +22,6 @@ jobs:
               owner: context.repo.owner,
               repo:  context.repo.repo,
               pull_number: pr.number,
-              review_requester: 'celim87@gmail.com',
+              reviewers: [celim87+PR@gmail.com],  
             });
             
