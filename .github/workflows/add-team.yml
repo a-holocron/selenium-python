@@ -7,7 +7,10 @@ on:
       - 'Release/*'
   workflow_dispatch:
     
-
+permissions:
+  pull-requests: write
+  contents: read
+  
 jobs:
   add_release_team:
     if: startsWith(github.event.pull_request.base.ref, 'Release/')
