@@ -35,3 +35,16 @@ class TestFinVizScreener:
         self.driver.get('https://finviz.com/')
         homepage = HomePage(self.driver)
         homepage.open_insider()
+
+    @pytest.mark.order(4)
+    def test_finviz_screener_exchanges(self):
+        expectedExchanges ={'Any','AMEX','NASDAQ','Custom (Elite only)','NYSE'}
+        print('screener')
+        self.driver.get('https://finviz.com/')
+        homepage = HomePage(self.driver)
+        homepage.open_screener()
+        screenerPage = ScreenerPage(self.driver)
+        exchanges = screenerPage.get_exchanges()
+        for exchange in exchanges:
+            assert exchange.text in expectedExchanges
+            print(exchange.text)

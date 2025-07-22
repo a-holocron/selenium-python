@@ -1,5 +1,6 @@
 from distlib.locators import Page
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 from seleniumpagefactory import PageFactory
 
 
@@ -12,7 +13,9 @@ class ScreenerPage(PageFactory):
 
     locators = {
         'ticker_input': (By.ID, 'tickersInput'),
-        'search_ticker': ('XPATH', '//input[@value=">"]')
+        'search_ticker': ('XPATH', '//input[@value=">"]'),
+        'Exchanges': ('ID', 'fs_exch')
+
     }
 
     def input_ticker(self, ticker):
@@ -21,3 +24,7 @@ class ScreenerPage(PageFactory):
     def search_for_ticker(self, ticker):
         self.ticker_input.send_keys(ticker)
         self.search_ticker.click()
+
+    def get_exchanges(self):
+        s = Select(self.Exchanges)
+        return s.options

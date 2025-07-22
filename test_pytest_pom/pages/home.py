@@ -1,3 +1,4 @@
+from selenium.webdriver.support.select import Select
 from seleniumpagefactory import PageFactory
 
 
