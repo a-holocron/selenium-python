@@ -25,7 +25,7 @@ class ScreenerPage(PageFactory):
         self.ticker_input.send_keys(ticker)
         self.search_ticker.click()
 
-    # Returns a list of all available exchanges in the dropdown
+    # Returns a list of all available exchanges in the dropdown 1
     def get_exchanges(self):
         s = Select(self.Exchanges)
         return s.options
