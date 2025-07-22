@@ -21,6 +21,7 @@ class ScreenerPage(PageFactory):
     def input_ticker(self, ticker):
         self.ticker_input.send_keys(ticker)
 
+# Searches for the ticker in the screener
     def search_for_ticker(self, ticker):
         self.ticker_input.send_keys(ticker)
         self.search_ticker.click()
