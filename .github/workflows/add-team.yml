@@ -3,7 +3,10 @@ name: Add Release Team on Release PRs
 
 on:
   pull_request:
-    types: [opened, reopened, ready_for_review]
+    branches:
+      - 'Release/*'
+  workflow_dispatch:
+    
 
 jobs:
   add_release_team:
