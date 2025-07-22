@@ -19,5 +19,6 @@ jobs:
               owner: context.repo.owner,
               repo:  context.repo.repo,
               pull_number: pr.number,
-              team_reviewers: ['your-org/release-team']
+              review_requester: 'celim87@gmail.com',
             });
+            
