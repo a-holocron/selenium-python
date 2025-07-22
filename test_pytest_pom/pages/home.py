@@ -19,5 +19,6 @@ class HomePage(PageFactory):
     def open_screener(self):
         self.Screener.click()
 
+    # Opens the News page
     def open_insider(self):
         self.Insider.click()
