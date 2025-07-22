@@ -25,6 +25,6 @@ jobs:
               owner: context.repo.owner,
               repo:  context.repo.repo,
               pull_number: pr.number,
-              reviewers: [clim0126],  
+              reviewers: ['clim0126'],  
             });
             
